@@ -16,11 +16,11 @@ public class PassingCars {
         //O(N)
 
         for(int i=0;i<A.length;i++){
-            //count and remove
-            if(A[i]==1){//this car was trvling West
-                result+=tvlEast;// first car passes all cars form oposite site
-                tvlWest--;//this specific car should not be counted more
-            }else{//this car was trvling East
+            // first car passes all cars form oposite site
+            //this specific car should not be counted more
+            if(A[i]==1){//this car was trvling West, so we dont count cars it is passing by
+                tvlWest--;
+            }else{//this car was trvling East, so we count
                 result+=tvlWest;
                 tvlEast--;
             }
